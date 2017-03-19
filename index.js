@@ -19,6 +19,13 @@ var api = new ParseServer({
   serverURL: process.env.SERVER_URL || 'http://pacific-retreat-78013.herokuapp.com/parse'
   liveQuery: {
     classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
+  },
+  push: {
+    ios: {
+      pfx: 'pixoveryrelease10.p12',
+      passphrase: 'bonjour3', // optional password to your p12/PFX
+      bundleId: 'com.eamon.sneek',
+    }
   }
 });
 // Client-keys like the javascript key or the .NET key are not necessary with parse-server
